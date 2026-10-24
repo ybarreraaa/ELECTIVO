@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REVISTA CIENTÍFICA | Vol. 1 Marzo - Octubre 2026 · Plataforma Web Interdisciplinaria</title>
+  <!-- Google Fonts: Playfair Display, Cormorant Garamond, Inter, DM Sans, Bodoni Moda, Libre Baskerville, Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@400;500;600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR STICKY (SECCIÓN 6) -->
+  <header class="site-navbar" id="site-navbar">
+    <div class="navbar-inner">
+      <a href="#inicio" class="brand-link" aria-label="Ir al inicio">
+        <span class="brand-kicker">VOL. 1 · MARZO – OCTUBRE 2026</span>
+        <span class="brand-name">REVISTA CIENTÍFICA</span>
+      </a>
+
+      <ul class="nav-links" id="main-nav-links">
+        <li><a href="#inicio" class="nav-link active" data-sec-link="inicio">Inicio</a></li>
+        <li><a href="#editorial" class="nav-link" data-sec-link="editorial">Editorial e Índice</a></li>
+        <li class="nav-dropdown">
+          <a href="#articulos" class="nav-link" data-sec-link="articulos">Investigaciones ▾</a>
+          <div class="nav-dropdown-menu" id="nav-articles-dropdown"></div>
+        </li>
+        <li><a href="#multimedia" class="nav-link" data-sec-link="multimedia">Multimedia</a></li>
+        <li><a href="#interactividad" class="nav-link" data-sec-link="interactividad">Interactividad y Glosario</a></li>
+        <li><a href="#fuentes" class="nav-link" data-sec-link="fuentes">Fuentes APA</a></li>
+        <li><a href="#creditos" class="nav-link" data-sec-link="creditos">Créditos</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="mode-switch-btn active-mode" id="mode-reader-btn" title="Vista pública para visitantes">
+          Modo Visitante
+        </button>
+        <button type="button" class="mode-switch-btn" id="mode-editor-btn" title="Activar herramientas de edición en vivo">
+          Modo Editor
+        </button>
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú de navegación">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE HERRAMIENTAS DEL MODO EDITOR (OCULTA EN MODO VISITANTE) -->
+  <section class="editor-bar" aria-label="Herramientas del Modo Editor">
+    <div class="editor-bar-inner">
+      <div class="editor-status">
+        <span class="editor-dot"></span>
+        <span>MODO EDITOR ACTIVO · PORTADA Y CONTRAPORTADA ORIGINALES PROTEGIDAS</span>
+      </div>
+      <div class="editor-controls">
+        <button type="button" class="ed-tool-btn primary" id="ed-btn-typo">Personalizar Tipografías</button>
+        <button type="button" class="ed-tool-btn" id="ed-btn-add-section">+ Añadir Sección</button>
+        <button type="button" class="ed-tool-btn" id="ed-btn-insert-media">+ Video YouTube / Enlace</button>
+        <button type="button" class="ed-tool-btn primary" id="ed-btn-save">Guardar</button>
+        <button type="button" class="ed-tool-btn" id="ed-btn-cancel">Cancelar Cambios</button>
+        <button type="button" class="ed-tool-btn" id="ed-btn-versions">Versiones</button>
+        <button type="button" class="ed-tool-btn" id="ed-btn-export">Exportar JSON</button>
+        <label class="ed-tool-btn" style="cursor:pointer;">
+          Importar JSON
+          <input type="file" id="ed-import-json-input" accept=".json,application/json" style="display:none;" />
+        </label>
+        <button type="button" class="ed-tool-btn" id="ed-btn-reset">Restaurar Original</button>
+        <input type="file" id="ed-replace-image-input" accept="image/*" style="display:none;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. SECCIÓN DE INICIO / HERO (SECCIONES 4 Y 5) -->
+  <section class="hero-section" id="inicio">
+    <div class="web-container">
+      <div class="hero-grid">
+        <!-- Columna Izquierda: Nombre original, título grande, introducción y botón EXPLORAR -->
+        <div>
+          <div class="hero-badge">
+            <span>REVISTA CIENTÍFICA · VOL. 1 MARZO – OCTUBRE 2026</span>
+          </div>
+          <h1 class="hero-main-title">
+            Interdisciplinaria de prevención social: Conocimiento, Sociedad y Futuro
+          </h1>
+          <p class="hero-lead">
+            «Antes de indagar en estas secciones, detente a considerar: ¿cuánto influye nuestro entorno social, emocional y tecnológico en las decisiones que tomamos cada día?»
+          </p>
+          <p class="hero-description">
+            Publicación académica interactiva desarrollada por la generación de <strong>4.º Medio B</strong> en el electivo de <em>Lectura y Escritura Especializada</em> del <strong>Liceo San Francisco (Vallenar, Chile)</strong>. Explora seis investigaciones rigurosas sobre estética del arte oscuro, salud mental escolar, personalidad psicopática, cuidadores de demencia, economía juvenil y ciberseguridad.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#editorial" class="btn-editorial btn-light" id="hero-explore-btn">
+              <span>EXPLORAR PUBLICACIÓN</span>
+              <span>→</span>
+            </a>
+            <a href="#articulos" class="btn-editorial btn-outline">
+              <span>IR A LAS 6 INVESTIGACIONES</span>
+            </a>
+            <button type="button" class="btn-editorial btn-outline" id="hero-audio-btn">
+              <span>AMBIENTE SONORO</span>
+            </button>
+          </div>
+
+          <div class="hero-stats-grid">
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">06</span>
+              <span class="hero-stat-label">Monografías Científicas</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">63</span>
+              <span class="hero-stat-label">Conceptos de Glosario</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">157</span>
+              <span class="hero-stat-label">Referencias APA Verificadas</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">27</span>
+              <span class="hero-stat-label">Investigadores y Editores</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Portada Original conservada intacta sin recortes ni deformaciones -->
+        <div class="hero-cover-showcase">
+          <div class="original-cover-frame">
+            <img
+              src="images/image1.png"
+              alt="Portada Original de la Revista Científica Vol. 1 Marzo - Octubre 2026"
+              class="original-cover-img"
+              data-lightbox-src="images/image1.png"
+              data-lightbox-title="Portada Oficial Original · Revista Científica Vol. 1 (Marzo – Octubre 2026)"
+              data-lightbox-caption="Diseño de portada original conservado íntegramente sin modificaciones (Equipo de Diseño Gráfico e Identidad Visual: Dante Páez Araya y Tomás Zarricueta Pinto)."
+            />
+            <div class="cover-lock-pill">
+              <span>Portada Original del Documento</span>
+              <span>Clic para ampliar vista +</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. SECCIÓN DE PRESENTACIÓN EDITORIAL E ÍNDICE DE CONTENIDOS -->
+  <section class="web-section bg-warm-white" id="editorial">
+    <div class="web-container">
+      <div id="editorial-content-mount"></div>
+
+      <div style="margin-top:64px;padding-top:52px;border-top:1px solid var(--beige-light);" id="indice">
+        <div class="section-header-center">
+          <span class="ed-kicker">MAPA DE NAVEGACIÓN ACADÉMICA</span>
+          <h2 class="ed-title">Índice de Investigaciones y Contenidos</h2>
+          <p class="ed-subtitle">
+            Selecciona cualquiera de los seis estudios monográficos para desplazarte directamente a su desarrollo completo, material gráfico y actividades interactivas.
+          </p>
+        </div>
+        <div class="toc-cards-grid" id="toc-cards-mount"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SECCIONES INDEPENDIENTES DE LOS 6 ARTÍCULOS / MONOGRAFÍAS (SECCIÓN 7) -->
+  <main id="articulos">
+    <div id="articles-sections-mount"></div>
+  </main>
+
+  <!-- 4. SECCIÓN DE GALERÍA FOTOGRÁFICA Y RECURSOS MULTIMEDIA / YOUTUBE (SECCIONES 10 Y 11.A) -->
+  <section class="web-section bg-cream" id="multimedia">
+    <div class="web-container">
+      <div class="section-header-center">
+        <span class="ed-kicker">ARCHIVO VISUAL Y PATRIMONIO DOCUMENTAL</span>
+        <h2 class="ed-title">Galería Fotográfica y Evidencia Gráfica</h2>
+        <p class="ed-subtitle">
+          Explora todas las fotografías, pinturas, tablas comparativas y gráficos estadísticos originales incluidos en el documento Word. Haz clic sobre cualquier imagen para abrir la vista ampliada con navegación.
+        </p>
+      </div>
+
+      <div class="filter-pills-bar" id="gallery-filter-bar"></div>
+      <div class="photo-gallery-grid" id="photo-gallery-mount"></div>
+
+      <!-- Recomendaciones Culturales y Videos de YouTube -->
+      <div style="margin-top:76px;padding-top:56px;border-top:1px solid var(--sand);">
+        <div class="section-header-center">
+          <span class="ed-kicker">CINE, DOCUMENTALES, LITERATURA Y MÚSICA</span>
+          <h2 class="ed-title">Recomendaciones Culturales y Recursos de YouTube</h2>
+          <p class="ed-subtitle">
+            Las nueve obras culturales curadas en el documento original para dialogar con cada monografía, con reproducción integrada y referencias en formato APA.
+          </p>
+        </div>
+        <div class="cultural-cards-grid" id="cultural-blocks-mount"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SECCIÓN DE INTERACTIVIDAD, «¿SABÍAS QUE?» Y GLOSARIO ACADÉMICO (SECCIÓN 11) -->
+  <section class="web-section bg-warm-white" id="interactividad">
+    <div class="web-container">
+      <div class="section-header-center">
+        <span class="ed-kicker">DIVULGACIÓN CIENTÍFICA Y EVIDENCIA</span>
+        <h2 class="ed-title">Cápsulas Informativas «¿Sabías que?»</h2>
+        <p class="ed-subtitle">
+          Seis hallazgos estadísticos, históricos y clínicos destacados por el Comité de Edición de Contenidos junto a sus fuentes primarias verificadas.
+        </p>
+      </div>
+      <div class="sabias-que-grid" id="sabias-que-mount"></div>
+
+      <!-- Glosario Académico Interdisciplinario (63 conceptos) -->
+      <div style="margin-top:76px;padding-top:56px;border-top:1px solid var(--beige-light);" id="glosario">
+        <div class="section-header-center">
+          <span class="ed-kicker">LÉXICO ESPECIALIZADO VALIDADO · 63 CONCEPTOS</span>
+          <h2 class="ed-title">Glosario Académico Interdisciplinario</h2>
+          <p class="ed-subtitle">
+            Consulta los 63 términos técnicos definidos en el documento original. Puedes buscar por palabra clave o filtrar según la monografía correspondiente.
+          </p>
+        </div>
+
+        <div class="search-toolbar">
+          <input
+            type="search"
+            id="glossary-search-input"
+            class="warm-search-input"
+            placeholder="Buscar término, concepto o palabra clave entre las 63 definiciones..."
+            aria-label="Buscar término en el glosario"
+          />
+        </div>
+        <div class="filter-pills-bar" id="glossary-cat-pills" style="justify-content:flex-start;margin-bottom:16px;"></div>
+        <p class="ed-caption" id="glossary-count-label" style="margin-bottom:16px;"></p>
+        <div class="glossary-cards-grid" id="glossary-cards-mount"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SECCIÓN DE FUENTES Y BIBLIOGRAFÍA GENERAL APA (SECCIÓN 19) -->
+  <section class="web-section bg-cream" id="fuentes">
+    <div class="web-container">
+      <div class="section-header-center">
+        <span class="ed-kicker">RIGOR METODOLÓGICO Y DOCUMENTACIÓN</span>
+        <h2 class="ed-title">Fuentes de Investigación y Bibliografía APA</h2>
+        <p class="ed-subtitle">
+          Registro íntegro de las citas, artículos científicos, leyes, encuestas nacionales y enlaces verificados utilizados en las seis monografías.
+        </p>
+      </div>
+
+      <div class="search-toolbar">
+        <input
+          type="search"
+          id="bib-search-input"
+          class="warm-search-input"
+          placeholder="Filtrar por autor, institución (OMS, INJUV, SERNAC, IBM, OCDE), año o tema..."
+          aria-label="Filtrar bibliografía APA"
+        />
+      </div>
+      <p class="ed-caption" id="bib-count-label" style="margin-bottom:14px;"></p>
+      <div class="bib-scroll-box" id="bibliography-list-mount"></div>
+    </div>
+  </section>
+
+  <!-- 7. SECCIÓN DE CRÉDITOS E INTEGRANTES DEL COMITÉ EDITORIAL (SECCIÓN 19) -->
+  <section class="web-section bg-warm-white" id="creditos">
+    <div class="web-container">
+      <div class="section-header-center">
+        <span class="ed-kicker">CRÉDITOS OFICIALES · 4.º MEDIO B · LICEO SAN FRANCISCO</span>
+        <h2 class="ed-title">Comité Editorial y Equipos de Trabajo</h2>
+        <p class="ed-subtitle">
+          Organización editorial responsable de la dirección, revisión estructural, corrección lingüística, diseño gráfico, diagramación y bibliografía APA del proyecto.
+        </p>
+      </div>
+
+      <div class="committees-grid" id="credits-committees-mount"></div>
+      <div id="colofon-box-mount"></div>
+    </div>
+  </section>
+
+  <!-- 8. SECCIÓN DE CIERRE CON CONTRAPORTADA ORIGINAL INTACTA (SECCIONES 4 Y 20) -->
+  <section class="web-section bg-beige" id="contraportada-seccion">
+    <div class="web-container">
+      <div class="backcover-showcase-layout">
+        <div>
+          <span class="ed-kicker">CIERRE DE LA EDICIÓN · OCTUBRE 2026</span>
+          <h2 class="ed-title">Contraportada Institucional Original</h2>
+          <p class="ed-subtitle">
+             Síntesis visual e institucional que cierra el primer volumen de nuestra publicación científica interdisciplinaria en la ciudad de Vallenar, Región de Atacama.
+          </p>
+          <p class="ed-paragraph">
+            La contraportada original del documento se conserva íntegramente en su diseño, composición, tipografía y proporción original, reflejando los cuatro pilares que articulan este proyecto: arte y subjetividad, salud mental en el ciclo vital, neuropsicología forense y ciudadanía económica y digital.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;">
+            <a href="#inicio" class="btn-editorial">Volver al Inicio ↑</a>
+            <button
+              type="button"
+              class="btn-editorial btn-outline"
+              data-lightbox-src="images/contraportada.png"
+              data-lightbox-title="Contraportada Oficial Original · Revista Científica Vol. 1"
+              data-lightbox-caption="Contraportada original conservada sin alteraciones (Liceo San Francisco, Vallenar, Octubre de 2026)."
+            >
+              Ampliar Contraportada +
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-cover-showcase">
+          <div class="original-cover-frame">
+            <img
+              src="images/contraportada.png"
+              alt="Contraportada Original de la Revista Científica Vol. 1"
+              class="original-cover-img"
+              data-lightbox-src="images/contraportada.png"
+              data-lightbox-title="Contraportada Oficial Original · Revista Científica Vol. 1"
+              data-lightbox-caption="Contraportada original conservada sin modificaciones."
+            />
+            <div class="cover-lock-pill">
+              <span>Contraportada Original Protegida</span>
+              <span>Clic para ampliar +</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. PIE DE PÁGINA PROFESIONAL (FOOTER, SECCIÓN 20) -->
+  <footer class="site-footer">
+    <div class="web-container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">REVISTA CIENTÍFICA · VOL. 1 (2026)</h3>
+          <p style="font-size:0.9rem;line-height:1.65;color:var(--beige-light);margin-bottom:14px;">
+            Publicación académica interdisciplinaria de prevención social: <em>Conocimiento · Sociedad · Futuro</em>. Desarrollada como evaluación sumativa del electivo de <strong>Lectura y Escritura Especializada</strong> (4.º Medio B, Liceo San Francisco, Vallenar, Chile).
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title" style="font-size:1.05rem;">Secciones del Sitio</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio y Portada Original</a></li>
+            <li><a href="#editorial">Carta Editorial e Índice</a></li>
+            <li><a href="#articulos">Las 6 Investigaciones Monográficas</a></li>
+            <li><a href="#multimedia">Galería Fotográfica y Videos</a></li>
+            <li><a href="#interactividad">¿Sabías que? y Glosario (63 términos)</a></li>
+            <li><a href="#fuentes">Bibliografía General APA (157 fuentes)</a></li>
+            <li><a href="#creditos">Comité Editorial y Colofón</a></li>
+            <li><a href="#contraportada-seccion">Contraportada Original</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title" style="font-size:1.05rem;">Monografías Incluidas</h4>
+          <ul class="footer-links">
+            <li><a href="#monografia-1">01. Arte de Temática Oscura y Recepción</a></li>
+            <li><a href="#monografia-2">02. Bienestar Emocional en Enseñanza Media</a></li>
+            <li><a href="#monografia-3">03. Estructura de la Personalidad Psicopática</a></li>
+            <li><a href="#monografia-4">04. Impactos en Cuidadores de Demencia</a></li>
+            <li><a href="#monografia-5">05. Educación Financiera y Economía Juvenil</a></li>
+            <li><a href="#monografia-6">06. Ciberseguridad Corporativa y Humana</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Octubre 2026 · Generación 4.º Medio B · Liceo San Francisco, Vallenar, Chile.</span>
+        <span>Todos los textos, fotografías, entrevistas y referencias provienen del documento oficial del proyecto.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REPRODUCTOR DE MÚSICA AMBIENTAL DISCRETO EN ESQUINA (SECCIÓN 9) -->
+  <aside class="ambient-player-floating" aria-label="Reproductor de música ambiental">
+    <button type="button" class="audio-circle-btn" id="audio-play-btn" title="Reproducir / Pausar música ambiental"></button>
+    <select id="audio-track-select" class="audio-select-warm" aria-label="Seleccionar pista ambiental"></select>
+    <input type="range" id="audio-volume-slider" class="audio-slider-warm" min="0" max="1" step="0.02" value="0.35" title="Ajustar volumen" />
+    <button type="button" class="audio-circle-btn" id="audio-mute-btn" title="Silenciar / Activar sonido">
+      <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+    </button>
+    <label class="audio-mp3-upload" title="Cargar archivo MP3 autorizado en Modo Editor">
+      + MP3
+      <input type="file" id="audio-upload-input" accept="audio/mp3,audio/mpeg,audio/*" style="display:none;" />
+    </label>
+  </aside>
+
+  <!-- BOTÓN FLOTANTE PARA VOLVER AL INICIO -->
+  <button type="button" class="back-to-top-btn" id="back-to-top-btn" aria-label="Volver al inicio" title="Volver al inicio">
+    ↑
+  </button>
+
+  <!-- PANEL LATERAL DE PERSONALIZACIÓN TIPOGRÁFICA EN TIEMPO REAL (SECCIÓN 8) -->
+  <aside class="typo-side-drawer" id="typo-drawer" aria-label="Panel de personalización tipográfica">
+    <div class="modal-header">
+      <h3 style="font-family:var(--font-title);font-size:1.25rem;color:var(--brown-dark);">Personalización Tipográfica</h3>
+      <button type="button" class="btn-editorial btn-outline btn-sm" id="typo-drawer-close">Cerrar</button>
+    </div>
+    <p class="ed-caption" style="margin-bottom:12px;">
+      Modifica en tiempo real las fuentes, tamaños, grosores, colores y espaciados del sitio web. Los archivos originales de Portada y Contraportada permanecen intactos.
+    </p>
+
+    <div class="typo-tabs-row">
+      <button type="button" class="typo-target-btn active" data-typo-target="title">Títulos</button>
+      <button type="button" class="typo-target-btn" data-typo-target="subtitle">Subtítulos</button>
+      <button type="button" class="typo-target-btn" data-typo-target="body">Párrafos</button>
+      <button type="button" class="typo-target-btn" data-typo-target="quote">Citas</button>
+      <button type="button" class="typo-target-btn" data-typo-target="caption">Botones/Meta</button>
+    </div>
+
+    <div class="form-field-group">
+      <label for="typo-font-select">Tipo de Letra</label>
+      <select id="typo-font-select">
+        <option value="'Playfair Display', Georgia, serif">Playfair Display (Títulos principales)</option>
+        <option value="'Cormorant Garamond', Georgia, serif">Cormorant Garamond (Títulos secundarios)</option>
+        <option value="'Inter', -apple-system, BlinkMacSystemFont, sans-serif">Inter (Texto normal alta legibilidad)</option>
+        <option value="'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif">DM Sans (Botones y navegación)</option>
+        <option value="'Libre Baskerville', Georgia, serif">Libre Baskerville (Serif académica)</option>
+        <option value="'Bodoni Moda', Georgia, serif">Bodoni Moda (Editorial clásica)</option>
+        <option value="'Lato', sans-serif">Lato (Humanista cálida)</option>
+      </select>
+    </div>
+
+    <div class="form-field-group">
+      <label for="typo-size-range"><span>Tamaño</span><span id="typo-size-val">2.15 rem</span></label>
+      <input type="range" id="typo-size-range" min="0.75" max="3.0" step="0.05" value="2.15" />
+    </div>
+
+    <div class="form-field-group">
+      <label for="typo-weight-select">Grosor</label>
+      <select id="typo-weight-select">
+        <option value="400">400 · Regular</option>
+        <option value="500">500 · Medium</option>
+        <option value="600">600 · Semi-Bold</option>
+        <option value="700">700 · Bold</option>
+      </select>
+    </div>
+
+    <div class="form-field-group">
+      <label for="typo-color-input">Color (Tonos Café / Tierra / Tinta)</label>
+      <input type="color" id="typo-color-input" value="#5E4B3C" style="width:100%;height:38px;border:1px solid var(--sand);border-radius:6px;background:var(--cream);cursor:pointer;" />
+    </div>
+
+    <div class="form-field-group">
+      <label for="typo-align-select">Alineación</label>
+      <select id="typo-align-select">
+        <option value="left">Izquierda</option>
+        <option value="justify">Justificado</option>
+        <option value="center">Centrado</option>
+        <option value="right">Derecha</option>
+      </select>
+    </div>
+
+    <div class="form-field-group">
+      <label for="typo-lh-range"><span>Interlineado</span><span id="typo-lh-val">1.75</span></label>
+      <input type="range" id="typo-lh-range" min="1.1" max="2.2" step="0.05" value="1.75" />
+    </div>
+
+    <div class="form-field-group">
+      <label for="typo-ls-range"><span>Espaciado entre letras</span><span id="typo-ls-val">0 em</span></label>
+      <input type="range" id="typo-ls-range" min="-0.03" max="0.2" step="0.01" value="0" />
+    </div>
+
+    <div class="form-field-group" style="display:flex;gap:18px;margin-top:10px;">
+      <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;">
+        <input type="checkbox" id="typo-italic-check" />
+        <span>Cursiva</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;">
+        <input type="checkbox" id="typo-upper-check" />
+        <span>Mayúsculas</span>
+      </label>
+    </div>
+
+    <button type="button" class="btn-editorial btn-outline" id="typo-reset-btn" style="width:100%;margin-top:12px;">
+      Restablecer Tipografías Originales
+    </button>
+  </aside>
+
+  <!-- MODAL 1: VISTA AMPLIADA DE GALERÍA FOTOGRÁFICA CON NAVEGACIÓN (SECCIÓN 11.A) -->
+  <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width:940px;text-align:center;">
+      <div class="modal-header">
+        <div>
+          <span class="ed-kicker" id="lightbox-counter" style="margin-bottom:2px;">1 / 12</span>
+          <h3 style="font-family:var(--font-title);font-size:1.2rem;color:var(--brown-dark);" id="lightbox-title">Fotografía</h3>
+        </div>
+        <button type="button" class="btn-editorial btn-outline btn-sm" data-close-modal="lightbox-modal">Cerrar ✕</button>
+      </div>
+
+      <div style="background:var(--cream);border:1px solid var(--beige-light);border-radius:8px;padding:16px;max-height:64vh;overflow:auto;display:flex;align-items:center;justify-content:center;">
+        <img id="lightbox-img" src="" alt="Vista ampliada" style="max-width:100%;max-height:58vh;object-fit:contain;" />
+      </div>
+
+      <p id="lightbox-caption" class="ed-paragraph" style="margin:14px auto;text-align:center;font-size:0.92rem;"></p>
+
+      <div style="display:flex;justify-content:center;gap:14px;margin-top:12px;">
+        <button type="button" class="btn-editorial btn-outline btn-sm" id="lightbox-prev-btn">← Fotografía Anterior</button>
+        <button type="button" class="btn-editorial btn-outline btn-sm" id="lightbox-next-btn">Fotografía Siguiente →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: REPRODUCTOR DE YOUTUBE INTEGRADO (SECCIÓN 10) -->
+  <div class="modal-backdrop" id="video-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 style="font-family:var(--font-title);font-size:1.25rem;color:var(--brown-dark);" id="video-modal-title">Video</h3>
+        <button type="button" class="btn-editorial btn-outline btn-sm" data-close-modal="video-modal">Cerrar Video ✕</button>
+      </div>
+      <div class="video-embed-box" id="video-iframe-container"></div>
+      <p id="video-modal-desc" class="ed-paragraph" style="font-size:0.92rem;max-width:none;margin-bottom:14px;"></p>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+        <span class="ed-caption">La música ambiental se pausa automáticamente mientras reproduces un video.</span>
+        <a id="video-modal-ext-link" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-sm">Abrir directamente en YouTube ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: AUTENTICACIÓN DEL MODO EDITOR (SHA-256) -->
+  <div class="modal-backdrop" id="auth-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width:480px;">
+      <div class="modal-header">
+        <h3 style="font-family:var(--font-title);font-size:1.25rem;color:var(--brown-dark);">Activar Modo Editor</h3>
+        <button type="button" class="btn-editorial btn-outline btn-sm" data-close-modal="auth-modal">Cancelar</button>
+      </div>
+      <p class="ed-paragraph" style="font-size:0.9rem;">
+        El Modo Visitante muestra únicamente el sitio público terminado. Para modificar textos, títulos, imágenes, colores, tipografías o recursos multimedia, verifica tu acceso editorial (protegido con <strong>SHA-256</strong>).
+      </p>
+      <form id="auth-form">
+        <div class="form-field-group">
+          <label for="auth-pin-input">Clave de Edición</label>
+          <input type="password" id="auth-pin-input" placeholder="Ingresa la clave editorial..." autocomplete="off" required />
+        </div>
+        <p id="auth-error-msg" style="display:none;color:var(--state-error-ink);font-size:0.82rem;margin-bottom:10px;">
+          Clave incorrecta. Puedes usar el botón «Acceso Evaluación Docente» para pruebas inmediatas.
+        </p>
+        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+          <button type="submit" class="btn-editorial" style="flex:1;">Desbloquear Editor</button>
+          <button type="button" class="btn-editorial btn-outline" id="auth-evaluator-quick-btn">Acceso Evaluación Docente</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 4: INSERTAR VIDEO DE YOUTUBE O ENLACE EN UNA SECCIÓN -->
+  <div class="modal-backdrop" id="insert-media-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width:540px;">
+      <div class="modal-header">
+        <h3 style="font-family:var(--font-title);font-size:1.25rem;color:var(--brown-dark);">Insertar Video de YouTube o Enlace</h3>
+        <button type="button" class="btn-editorial btn-outline btn-sm" data-close-modal="insert-media-modal">Cancelar</button>
+      </div>
+      <form id="insert-media-form">
+        <div class="form-field-group">
+          <label for="media-target-section">Seleccionar Artículo / Sección</label>
+          <select id="media-target-section"></select>
+        </div>
+        <div class="form-field-group">
+          <label for="media-title-input">Título del Recurso Audiovisual</label>
+          <input type="text" id="media-title-input" placeholder="Ej: Documental o conferencia relacionada" required />
+        </div>
+        <div class="form-field-group">
+          <label for="media-url-input">Enlace de YouTube o Fuente Académica</label>
+          <input type="url" id="media-url-input" placeholder="https://www.youtube.com/watch?v=..." required />
+        </div>
+        <div class="form-field-group">
+          <label for="media-desc-input">Descripción y Canal / Autor</label>
+          <input type="text" id="media-desc-input" placeholder="Breve descripción del aporte al artículo" />
+        </div>
+        <button type="submit" class="btn-editorial" style="width:100%;margin-top:8px;">Guardar Recurso en la Sección</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 5: HISTORIAL DE VERSIONES -->
+  <div class="modal-backdrop" id="versions-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width:600px;">
+      <div class="modal-header">
+        <h3 style="font-family:var(--font-title);font-size:1.25rem;color:var(--brown-dark);">Restaurar Versión Anterior</h3>
+        <button type="button" class="btn-editorial btn-outline btn-sm" data-close-modal="versions-modal">Cerrar</button>
+      </div>
+      <div id="versions-list-container"></div>
+    </div>
+  </div>
+
+  <!-- MODAL 6: FICHA DE ENTREVISTAS DOCUMENTALES -->
+  <div class="modal-backdrop" id="generic-info-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 style="font-family:var(--font-title);font-size:1.25rem;color:var(--brown-dark);">Entrevista Especializada</h3>
+        <button type="button" class="btn-editorial btn-outline btn-sm" data-close-modal="generic-info-modal">Cerrar</button>
+      </div>
+      <div id="generic-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div class="warm-toast" id="editorial-toast" role="status" aria-live="polite"></div>
+
+  <!-- SCRIPTS DEL PROYECTO -->
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
